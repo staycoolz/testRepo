@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+--><!-- The contents of this file will be loaded for each web application --><Context>
+
+    <!-- Default set of monitored resources -->
+    <WatchedResource>WEB-INF/web.xml</WatchedResource>
+
+    <!-- Uncomment this to disable session persistence across Tomcat restarts -->
+    <!--
+    <Manager pathname="" />
+    -->
+
+    <!-- Uncomment this to enable Comet connection tacking (provides events
+         on session expiration as well as webapp lifecycle) --><Resource acquireRetryAttempts="60" acquireRetryDelay="1000" auth="Container" breakAfterAcquireFailure="false" driverClass="org.postgresql.Driver" factory="org.apache.naming.factory.BeanFactory" idleConnectionTestPeriod="600" jdbcUrl="jdbc:postgresql://10.20.18.37:5432/DATA_PROVIDER" maxIdleTime="100" maxPoolSize="10" minPoolSize="10" name="jdbc/dataProvider" password="" type="com.mchange.v2.c3p0.ComboPooledDataSource" user="postgres"/>
+    <!--
+    <Valve className="org.apache.catalina.valves.CometConnectionManagerValve" />
+    -->
+	
+	<Manager pathname=""/>
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsSIT" name="jdbc/mufinsSIT" type="javax.sql.DataSource"/>
+				 
+	<ResourceLink auth="Container" global="jdbc/mufinsFilesSIT" name="jdbc/mufinsFilesSIT" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsCX2" name="jdbc/mufinsCX2" type="javax.sql.DataSource"/>
+				 
+	<ResourceLink auth="Container" global="jdbc/mufinsReport" name="jdbc/mufinsReport" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsReportSIT" name="jdbc/mufinsReportSIT" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsFiles" name="jdbc/mufinsFiles" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsFilesHistory" name="jdbc/mufinsFilesHistory" type="javax.sql.DataSource"/>
+				 
+	<ResourceLink auth="Container" global="jdbc/mufinsRunningNumber" name="jdbc/mufinsRunningNumber" type="javax.sql.DataSource"/>			 
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsScoring-mufinsCX2" name="jdbc/mufinsScoring-mufinsCX2" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsScoring" name="jdbc/mufinsScoring" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsScoringSIT" name="jdbc/mufinsScoringSIT" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsPartner" name="jdbc/mufinsPartner" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsPartnerSIT" name="jdbc/mufinsPartnerSIT" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/immob" name="jdbc/immob" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/dataProvider" name="jdbc/dataProvider" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsMonitoringBoard" name="jdbc/mufinsMonitoringBoard" type="javax.sql.DataSource"/>  
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsMonitoringBoardSIT" name="jdbc/mufinsMonitoringBoardSIT" type="javax.sql.DataSource"/>  
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsCX2-edb" name="jdbc/mufinsCX2-edb" type="javax.sql.DataSource"/>  
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsScoring-edb" name="jdbc/mufinsScoring-edb" type="javax.sql.DataSource"/>  
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsCheckingContact" name="jdbc/mufinsCheckingContact" type="javax.sql.DataSource"/>  
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsMonitoringBoardPostgre" name="jdbc/mufinsMonitoringBoardPostgre" type="javax.sql.DataSource"/>  
+	
+	<ResourceLink auth="Container" global="jdbc/smmfFranchiseRunningNumber" name="jdbc/smmfFranchiseRunningNumber" type="javax.sql.DataSource"/>  
+
+	
+	<!-- PARAMITRA -->
+
+	<ResourceLink auth="Container" global="jdbc/mufinsPMF" name="jdbc/mufinsPMF" type="javax.sql.DataSource"/>
+	<ResourceLink auth="Container" global="jdbc/mufinsPMF-report" name="jdbc/mufinsPMF-report" type="javax.sql.DataSource"/>
+	<ResourceLink auth="Container" global="jdbc/mufinsPMF-files" name="jdbc/mufinsPMF-files" type="javax.sql.DataSource"/>
+	<ResourceLink auth="Container" global="jdbc/mufinsPMFSIT" name="jdbc/mufinsPMFSIT" type="javax.sql.DataSource"/>
+	<ResourceLink auth="Container" global="jdbc/mufinsPMF-reportSIT" name="jdbc/mufinsPMF-reportSIT" type="javax.sql.DataSource"/>
+	<ResourceLink auth="Container" global="jdbc/mufinsPMF-filesSIT" name="jdbc/mufinsPMF-filesSIT" type="javax.sql.DataSource"/>
+	<ResourceLink auth="Container" global="jdbc/mufinsHrd" name="jdbc/mufinsHrd" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/paramitraClone" name="jdbc/paramitraClone" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/paramitraCloneReport" name="jdbc/paramitraCloneReport" type="javax.sql.DataSource"/>
+	
+	<!-- END PARAMITRA -->
+	
+	<!-- MUFINS BMP -->
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsBMP" name="jdbc/mufinsBMP" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsBaramaNew" name="jdbc/mufinsBaramaNew" type="javax.sql.DataSource"/>
+	
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsPihak3" name="jdbc/mufinsPihak3" type="javax.sql.DataSource"/>
+				 
+	
+			
+	<ResourceLink auth="Container" global="jdbc/mufinsScoringHANA-mufinsHANA" name="jdbc/mufinsScoringHANA-mufinsHANA" type="javax.sql.DataSource"/>
+				
+	<ResourceLink auth="Container" global="jdbc/mufinsHANA" name="jdbc/mufinsHANA" type="javax.sql.DataSource"/>
+				
+	<ResourceLink auth="Container" global="jdbc/mufinsHANA-report" name="jdbc/mufinsHANA-report" type="javax.sql.DataSource"/>
+				
+	<ResourceLink auth="Container" global="jdbc/mufinsHANA-files" name="jdbc/mufinsHANA-files" type="javax.sql.DataSource"/>
+				
+	<ResourceLink auth="Container" global="jdbc/mufinsHANASIT" name="jdbc/mufinsHANASIT" type="javax.sql.DataSource"/>
+				
+	<ResourceLink auth="Container" global="jdbc/mufinsHANASIT-report" name="jdbc/mufinsHANASIT-report" type="javax.sql.DataSource"/>
+				
+	<ResourceLink auth="Container" global="jdbc/mufinsSMMF-pihak3" name="jdbc/mufinsSMMF-pihak3" type="javax.sql.DataSource"/> 
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsCX2-syariah" name="jdbc/mufinsCX2-syariah" type="javax.sql.DataSource"/>
+
+    <ResourceLink auth="Container" global="jdbc/mufinsReport-syariah" name="jdbc/mufinsReport-syariah" type="javax.sql.DataSource"/>
+
+    <ResourceLink auth="Container" global="jdbc/mufinsFiles-syariah" name="jdbc/mufinsFiles-syariah" type="javax.sql.DataSource"/>
+
+    <ResourceLink auth="Container" global="jdbc/mufinsScoring-syariah" name="jdbc/mufinsScoring-syariah" type="javax.sql.DataSource"/>
+
+    <ResourceLink auth="Container" global="jdbc/mufinsScoring-mufinsCX2-syariah" name="jdbc/mufinsScoring-mufinsCX2-syariah" type="javax.sql.DataSource"/>
+
+	<ResourceLink auth="Container" global="jdbc/mufinsRunningNumber-syariah" name="jdbc/mufinsRunningNumber-syariah" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsCX2-syariah-DEV" name="jdbc/mufinsCX2-syariah-DEV" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsEdb" name="jdbc/mufinsEdb" type="javax.sql.DataSource"/> 
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsScoringEdbOracle" name="jdbc/mufinsScoringEdbOracle" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsRunningNumberEDB" name="jdbc/mufinsRunningNumberEDB" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsScoring-mufinsCX2-oracle" name="jdbc/mufinsScoring-mufinsCX2-oracle" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsEdbPgPool" name="jdbc/mufinsEdbPgPool" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsPartner" name="jdbc/mufinsPartner" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsPartnerFiles" name="jdbc/mufinsPartnerFiles" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsOracleUat" name="jdbc/mufinsOracleUat" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/cifbb" name="jdbc/cifbb" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsFiles-edb" name="jdbc/mufinsFiles-edb" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsFiles119" name="jdbc/mufinsFiles119" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsScoring124" name="jdbc/mufinsScoring124" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsScoring119" name="jdbc/mufinsScoring119" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsScoring182" name="jdbc/mufinsScoring182" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/slik" name="jdbc/slik" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/slikSIT" name="jdbc/slikSIT" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsFranchise" name="jdbc/mufinsFranchise" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/smmfFranchiseFiles" name="jdbc/smmfFranchiseFiles" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/mufinsFranchise-report" name="jdbc/mufinsFranchise-report" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/smmfFranchise" name="jdbc/smmfFranchise" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/smmfFranchiseReport" name="jdbc/smmfFranchiseReport" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/smmfMonitor" name="jdbc/smmfMonitor" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/abmfMufins" name="jdbc/abmfMufins" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/abmfMufinsReport" name="jdbc/abmfMufinsReport" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/abmfMufinsFiles" name="jdbc/abmfMufinsFiles" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/abmfMufinsRunningNumber" name="jdbc/abmfMufinsRunningNumber" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/simarket" name="jdbc/simarket" type="javax.sql.DataSource"/>
+	
+	<ResourceLink auth="Container" global="jdbc/simarketFile" name="jdbc/simarketFile" type="javax.sql.DataSource"/>
+	
+</Context>
